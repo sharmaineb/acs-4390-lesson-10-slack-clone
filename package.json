@@ -1,0 +1,21 @@
+{
+  "name": "lesson-10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0",
+    "graphql-ws": "^5.14.3",
+    "subscriptions-transport-ws": "^0.11.0",
+    "ws": "^8.16.0"
+  }
+}
