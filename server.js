@@ -10,12 +10,25 @@ const postsData = [
   { id: 2, message: 'Learning GraphQL is fun!', date: '2022-01-31' },
 ];
 
+const channelsData = [
+  { id: 1, name: 'Channel 1' },
+  { id: 2, name: 'Channel 2' },
+];
+
 const PostType = new GraphQLObjectType({
   name: 'Post',
   fields: {
     id: { type: GraphQLString },
     message: { type: GraphQLString },
     date: { type: GraphQLString },
+  },
+});
+
+const ChannelType = new GraphQLObjectType({
+  name: 'Channel',
+  fields: {
+    id: { type: GraphQLString },
+    name: { type: GraphQLString },
   },
 });
 
@@ -29,6 +42,12 @@ const RootQueryType = new GraphQLObjectType({
       },
       resolve: (parent, args) => {
         return postsData;
+      },
+    },
+    channels: {
+      type: new GraphQLList(ChannelType),
+      resolve: (parent, args) => {
+        return channelsData;
       },
     },
   },
